@@ -1,0 +1,22 @@
+quantity = int(input())
+orders = list(map(int, input().split()))
+sum_orders = 0
+orders_complete = []
+orders_left = []
+for i in orders:
+    sum_orders += i
+    if quantity >= sum_orders:
+        orders_complete.append(i)
+    else:
+        orders_left.append(i)
+left = list(map(str, orders_left))
+lef = " ".join(left)
+if sum_orders <= quantity:
+    print(max(orders))
+    print("Orders complete")
+else:
+    print(max(orders))
+    print(f"Orders left: {lef}")
+
+
+
